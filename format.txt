@@ -1,0 +1,27 @@
+Sub FormatInvoiceToNumbers(invNo As String, invDate As String, custID As String, totalAmt As String, email As String)
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    
+    Set ws = ThisWorkbook.Sheets("Sheet1")
+    
+    lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
+    
+    ws.Cells(lastRow, 1).Value = CLng(invNo)
+    ws.Cells(lastRow, 1).NumberFormat = "0"
+    
+    ws.Cells(lastRow, 2).Value = CDate(invDate)
+    ws.Cells(lastRow, 2).NumberFormat = "m/d/yyyy"
+    
+    ws.Cells(lastRow, 3).Value = CLng(custID)
+    ws.Cells(lastRow, 3).NumberFormat = "0"
+    
+    Dim cleanAmt As String
+    cleanAmt = Replace(totalAmt, " ", "")
+    cleanAmt = Replace(cleanAmt, ",", ".")
+    ws.Cells(lastRow, 4).Value = CDbl(cleanAmt)
+    ws.Cells(lastRow, 4).NumberFormat = "#,##0.00"
+    
+    ws.Cells(lastRow, 5).Value = email
+    ws.Cells(lastRow, 5).NumberFormat = "@"
+
+End Sub

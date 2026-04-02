@@ -1,0 +1,40 @@
+ 
+# --- Compiled / Build Output ---
+.local/
+*.dll
+*.nupkg
+*.nuget.props
+*.cache
+*.db
+ 
+# --- UiPath Auto-generated Folders ---
+.objects/
+.screenshots/
+.storage/
+.tmh/
+.templates/
+.entities/
+ 
+# --- Settings (môi trường cụ thể, không share) ---
+.settings/
+ 
+# --- NuGet ---
+packages/
+ 
+# --- Logs & Temp ---
+*.log
+*.tmp
+*~
+ 
+# --- OS ---
+Thumbs.db
+.DS_Store
+Desktop.ini
+ 
+# --- IDE / Editor ---
+.vs/
+.vscode/
+*.user
+*.suo
+*.rsuser
+ 
